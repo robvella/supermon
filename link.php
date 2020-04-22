@@ -296,18 +296,23 @@ if (count($nodes) > 0) {
         print " <input class=\"submit\" type=\"hidden\" id=\"localnode\" value=\"{$nodes[0]}\">";
     }
 ?>
- <input style="margin-top:10px;" type="text" id="node">
-Permanent <input class="submit" type="checkbox"><br/>
-<input style="margin-top:2px;" type="button" class="submit" value="Connect" id="connect">
-<input type="button" class="submit" value="Disconnect" id="disconnect">
-<input type="button" class="submit" value="Monitor" id="monitor">
-<input type="button" class="submit" value="Local Monitor" id="localmonitor">
-<input type="button" class="submit" value="DTMF" id="dtmf">
-<input type="button" class="submit" value="Lookup" id="astlookup">
-<input type="button" class="submit" value="Rpt Stats" id="rptstats">
-<input type="button" class="submit" value="Bubble Chart" id="map">
-<input type="button" class="submit" value="Control" id="controlpanel">
-<input style="margin-bottom:5px;" type="button" class="submit" value="Favorites" id="favoritespanel">
+<input type="text" class="form-control mb-2 mr-sm-2" id="node">
+
+<div class="form-check form-check-inline mb-2 mr-sm-2">
+<input class="form-check-input" type="checkbox">
+<label for="permanentCheckbox" class="form-check-label">Permanent</label>
+</div>
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Connect" id="connect">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Disconnect" id="disconnect">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Monitor" id="monitor">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Local Monitor" id="localmonitor">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="DTMF" id="dtmf">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Lookup" id="astlookup">
+<br>
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Rpt Stats" id="rptstats">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Bubble Chart" id="map">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Control" id="controlpanel">
+<input style="margin-bottom:5px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Favorites" id="favoritespanel">
 
 <SCRIPT>
     function OpenActiveNodes () {
@@ -329,54 +334,50 @@ Permanent <input class="submit" type="checkbox"><br/>
         window.open('<?php if (! empty($ARCHIVE_URL)) print "$ARCHIVE_URL"; ?>');
     }
 </SCRIPT>
-<br>
 
-<input style="margin-top:5px;" type="button" class="submit" value="Configuration Editor" OnClick="OpenConfigEditor()">
-<input type="button" class="submit" value="Iax/Rpt/DP RELOAD" id="astreload">
-<input type="button" class="submit" value="AST START" id="astaron">
-<input type="button" class="submit" value="AST STOP" id="astaroff">
-<input type="button" class="submit" value="RESTART" id="fastrestart">
-<input style="margin-bottom:1px;" type="button" class="submit" value="Server REBOOT" id="reboot">
-<?php if ($system_type === "hamvoip") { ?>
-<input style="margin-bottom:1px;" type="button" class="submit" value="SW Update?" id="openupdate">
-<?php } ?>
+<input style="margin-top:5px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Configuration Editor" OnClick="OpenConfigEditor()">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Iax/Rpt/DP RELOAD" id="astreload">
 <br>
-<input style="margin-top:1px;" type="button" class="submit" value="AllStar How To's" OnClick="OpenHelp()">
-<input type="button" class="submit" value="AllStar Wiki" OnClick="OpenWiki()">
-<input type="button" class="submit" value="CPU Status" id="cpustats">
-<input type="button" class="submit" value="AllStar Status" id="stats">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AST START" id="astaron">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AST STOP" id="astaroff">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="RESTART" id="fastrestart">
+<input style="margin-bottom:1px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Server REBOOT" id="reboot">
+<input style="margin-top:1px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AllStar How To's" OnClick="OpenHelp()">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AllStar Wiki" OnClick="OpenWiki()">
+<br>
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="CPU Status" id="cpustats">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AllStar Status" id="stats">
 <?php if ($EXTN) { ?>
-<input type="button" class="submit" value="Registry" id="extnodes">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Registry" id="extnodes">
 <?php } ?>
-<input type="button" class="submit" value="Node Info" id="astnodes">
-<input type="button" class="submit" value="Active Nodes" OnClick="OpenActiveNodes()">
-<input style="margin-bottom:1px;" type="button" class="submit" value="All Nodes" OnClick="OpenAllNodes()">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Node Info" id="astnodes">
 <?php
 // ADDED KN2R 6-2018
    if (! empty($DATABASE_TXT)) {
-      ?> <input style="margin-bottom:1px;" type="button" class="submit" value="Database" id="database">
+      ?> <input style="margin-bottom:1px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Database" id="database">
       <?php
    }
 ?>
-<br>
+
 <?php
    if ((! empty($ARCHIVE_URL)) || (`cat /etc/asterisk/rpt.conf |egrep -c ^"archivedir"` > 0)) {
-      ?> <input style="margin-top:1px;" type="button" class="submit" value="Archive" OnClick="OpenArchiveURL()">
+      ?> <input style="margin-top:1px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Archive" OnClick="OpenArchiveURL()">
       <?php
    }
 // END KN2R
 ?>
 <!-- Added GPIO, WA3DSP 3-25-17 -->
-<input style="margin-top:1px;" type="button" class="submit" value="GPIO" id="openpigpio">
-<input type="button" class="submit" value="Linux Log" id="linuxlog">
-<input type="button" class="submit" value="AST Log" id="astlog">
-<input type="button" class="submit" value="Connection Log" id="clog">
+<input style="margin-top:1px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="GPIO" id="openpigpio">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Linux Log" id="linuxlog">
+<br>
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="AST Log" id="astlog">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Connection Log" id="clog">
 <?php if ($IRLPLOG) { ?>
-<input type="button" class="submit" value="IRLP Log" id="irlplog">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="IRLP Log" id="irlplog">
 <?php } ?>
-<input type="button" class="submit" value="Web Access Log" id="webacclog">
-<input type="button" class="submit" value="Web Error Log" id="weberrlog">
-<input style="margin-bottom:10px;" type="button" class="submit" value="Restrict" id="openbanallow">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Web Access Log" id="webacclog">
+<input type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Web Error Log" id="weberrlog">
+<input style="margin-bottom:10px;" type="button" class="form-control btn btn-dark mb-2 mr-sm-2" value="Restrict" id="openbanallow">
 <br>
 <?php
 $uptime = exec("$UPTIME");
@@ -395,15 +396,15 @@ if (empty($WANONLY)) {
    $mylanip = exec("$IFCONFIG |$GREP inet |$HEAD -1 |$AWK '{print $2}'");
    $myip = $mylanip;
 }
-$myssh = exec("$CAT /etc/ssh/sshd_config |$EGREP '^Port' |$TAIL -1 |$CUT -d' ' -f2");
-if ($myip == $mylanip) {
-   print "[ $hostname ] [ WAN IP: <a href=\"custom/iplog.txt\" target=\"_blank\">${myip}</a> ] [ AstP: ${astport} ] [ MgrP: ${mgrport} ] [ SShP: ${myssh} ]";
-} else {
-   print "[ $hostname ] [ WAN IP: <a href=\"custom/iplog.txt\" target=\"_blank\">${myip}</a> ] [ " . $WL . "LAN IP: ${mylanip} ] [ AstP: ${astport} ] [ MgrP: ${mgrport} ] [ SShP: ${myssh} ]";
-}
+//$myssh = exec("$CAT /etc/ssh/sshd_config |$EGREP '^Port' |$TAIL -1 |$CUT -d' ' -f2");
+//if ($myip == $mylanip) {
+//   print "[ $hostname ] [ WAN IP: <a href=\"custom/iplog.txt\" target=\"_blank\">${myip}</a> ] [ AstP: ${astport} ] [ MgrP: ${mgrport} ] [ SShP: ${myssh} ]";
+//} else {
+//   print "[ $hostname ] [ WAN IP: <a href=\"custom/iplog.txt\" target=\"_blank\">${myip}</a> ] [ " . $WL . "LAN IP: ${mylanip} ] [ AstP: ${astport} ] [ MgrP: ${mgrport} ] [ SShP: ${myssh} ]";
+//}
 } #endif (count($nodes) > 0)
-print "<br>";
-print "[ $myday $uptime ]";
+//print "<br>";
+//print "[ $myday $uptime ]";
 
 ?>
 </div>
@@ -416,12 +417,12 @@ print "[ $myday $uptime ]";
 <?php
 
 // ADDED WA3DSP = Display configuration tool
-print "<p style=\"margin-bottom:5px;margin-top:10px;\"><input type=\"button\" class=\"submit\" Value=\"Display Configuration\" onclick=\"window.open('display-config.php','DisplayConfiguration','status=no,location=no,toolbar=no,width=600,height=550,left=100,top=100')\">";
+//print "<p style=\"margin-bottom:5px;margin-top:10px;\"><input type=\"button\" class=\"submit\" Value=\"Display Configuration\" onclick=\"window.open('display-config.php','DisplayConfiguration','status=no,location=no,toolbar=no,width=600,height=550,left=100,top=100')\">";
 // END WA3DSP
 
 // ADDED KN2R - CPU temp indicator
-$CPUTemp = exec("/usr/local/sbin/supermon/get_temp");
-print " &nbsp; [ $CPUTemp]";
+//$CPUTemp = exec("/usr/local/sbin/supermon/get_temp");
+//print " &nbsp; [ $CPUTemp]";
 
 // ADDED KN2R - 11/7/2018 - Core dump file indicator
 if (isset($SHOW_COREDUMPS) && ($SHOW_COREDUMPS == 'yes')) {
@@ -456,7 +457,7 @@ print "</p>";
 if (isset($LOCALZIP)) {
     $WX = exec("/usr/local/sbin/weather.sh $LOCALZIP v");
     print "<p style=\"margin-top:0px;\">[ Weather conditions for $LOCATION $LOCALZIP: ";
-    print "<span style=\"margin-top:0px; background-color: GAINSBORO;\">&nbsp;$WX&nbsp;</span> ]";
+    print "<span style=\"margin-top:0px; background-color: black;\">&nbsp;$WX&nbsp;</span> ]";
 }
 
 // ADDED WA3DSP Autosky warning messages
@@ -501,8 +502,8 @@ foreach($nodes as $node) {
             $lsNodesChart = $config[$node]['lsnodes'];
             $title .= "<a href=\"$lsNodesChart\" target=\"_blank\" id=\"lsnodeschart\">lsNodes</a> &nbsp;";
         } else if ((preg_match("/localhost/", $config[$node]['host'])) || ((preg_match("/127.0.0.1/", $config[$node]['host'])))) {
-            $lsNodesChart = "/cgi-bin/lsnodes_web?node=$node";
-            $title .= "<a href=\"$lsNodesChart\" target=\"_blank\" id=\"lsnodeschart\">lsNodes</a> &nbsp;";
+            //$lsNodesChart = "/cgi-bin/lsnodes_web?node=$node";
+            //$title .= "<a href=\"$lsNodesChart\" target=\"_blank\" id=\"lsnodeschart\">lsNodes</a> &nbsp;";
         }
     // END KN2R
 

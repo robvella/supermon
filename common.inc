@@ -22,7 +22,7 @@ $WEB_ERROR_LOG = "/var/log/httpd/error_log";
 $ASTERISK_LOG = "/var/log/asterisk/messages";
 //
 // AllStar allmon database
-$ASTDB_TXT = "/var/log/asterisk/astdb.txt";
+$ASTDB_TXT = "/var/www/html/astdb.txt";
 //
 // AllStar rpt_extnodes file --- not present in DNS mode.
 $EXTNODES = "/tmp/rpt_extnodes";

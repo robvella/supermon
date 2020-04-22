@@ -70,7 +70,7 @@
     left: 10px;
     margin: 0px 0px;
     font-size: 0.9em;
-    color: cyan;
+    color: white;
     font-weight: bold;
     line-height: normal;
     font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
@@ -83,7 +83,7 @@
     left: 10px;
     margin: 0px 0px;
     font-size: 1.3em;
-    color: lightgreen;
+    color: white;
     font-weight: bold;
     line-height: normal;
     font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
@@ -96,7 +96,7 @@
     left: 10px;
     margin: 0px 0px;
     font-size: 1.3em;
-    color: yellow;
+    color: white;
     font-weight: bold;
     line-height: normal;
     font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
@@ -115,24 +115,24 @@
     left: 11px;
     font-size: 14px;
     font-family: Verdana,Arial,sans-serif;
-    color: lightgray;
+    color: white;
 }
 
 #headerLogin a:link {
     text-decoration: none;
-    color: lightgray;    
+    color: white;    
 }
 
 #headerLogin a:visited {
     text-decoration: none;
-    color: lightgray;
+    color: white;
 }
 
 #headerLogin a:hover {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    color: yellow;
+    color: red;
 }
 
 #menu {
@@ -143,7 +143,7 @@
     box-sizing: border-box;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: darkblue;
+    background-color: black;
     font-size: 15px;
     font-family: Verdana,Arial,sans-serif;
 }
@@ -172,7 +172,7 @@
     margin: 0;
     float: left;
     padding: 1px 8px 2px 3px;
-    background-color: darkblue;
+    background-color: black;
 }
 
 #menu li {
@@ -226,6 +226,7 @@
 
 #footer {
     font-size: 11px;
+	text-align: center;
 }
 
 table.rtcm {
@@ -241,13 +242,16 @@ table.rtcm tr {
 
 table.rtcm td {
     white-space: nowrap;
+    min-height: 100%;
+    width: 100%;
 }
 
 table.rtcm th {
     border: 1px solid black;
     font-size: 12px;
     padding: 5px;
-    background-color: #dedede;
+    background-color: black;
+	color: white;
 }
 
 table.gridtable {
@@ -258,30 +262,34 @@ table.gridtable {
     border-width: 1px;
     border-color: black;
     border-collapse: collapse;
+    min-height: 10%;
+    width: 99%;
 }
 
 table.gridtable th {
     border-width: 1px;
     padding: 4px;
     border-style: solid;
-    border-color: black;
-    background-color: lightgray;
+    border-color: white;
+    background-color: black;
     font-size: 12px;
+	color: white;
 }
 
 table.gridtable td {
     border-width: 1px;
     padding: 4px;
     border-style: solid;
-    border-color: black;
-    background-color: #ffffff;
+    border-color: white;
+    background-color: black;
     font-size: 11px;
+	color: white;
 }
 
 table.gridtable tr.rColor td {
-    background-color: darkblue;
+    background-color: black;
     font-weight: bold;
-    color: yellow;
+    color: white;
 }
 
 table.gridtable tr.cColor td {
@@ -291,32 +299,32 @@ table.gridtable tr.cColor td {
 }
 
 table.gridtable tr.bColor td {
-    background-color: palegreen;
+    background-color: black;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 table.gridtable tr.gColor td {
-    background-color: lightgray;
+    background-color: black;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 table.gridtable tr.tColor td {
-    background-color: lemonchiffon;
+    background-color: green;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 table.gridtable tr.lColor td {
-    background-color: powderblue;
+    background-color: black;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .disconnect {
     font-size: 14px;
-    text-align: left;
+    text-align: right;
 }
 
 .text {
@@ -411,14 +419,104 @@ label {
 }
 
 .submit {
-    background: lightgray;
+    background: black;
     padding: 3px 4px 4px 4px 1px;
-    color: black;
+    color: white;
 }
 
 .submit:hover {
-    background: darkblue;
+    background: red;
     font-weight: bold;
     padding: 3px 4px 4px 4px 1px;
     color: yellow;
+}
+
+textarea {
+  width: 97%;
+  height: 97%;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #000000;
+    resize: none;
+    color: #ffffff;
+}
+
+html {
+	position:relative;
+	left:15px;
+	top:15px;
+   height: 100%;
+   width: 97%;
+    background-color: black;
+    color: white;
+}
+
+body {
+	position:relative;
+	left:15px;
+	top:15px;
+    min-height: 100%;
+    width: 97%;
+    background-color: black;
+    color: white;
+}
+
+.ui-button-icon-only .ui-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #313131;
+	color:white
+}
+
+.ui-widget-header {
+    border: 1px solid #dddddd;
+    background: #212529;
+    color: #f8f9fa;
+    font-weight: bold;
+}
+
+input {
+    text-rendering: auto;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    background-color: #313131;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+a {
+    color: #faff06;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+element.style {
+    background-color: #212529;
+    color: white;
+    display: block;
+    width: auto;
+    min-height: 13.0781px;
+    max-height: none;
+    height: auto;
+}
+
+.form-control {
+    width: auto;
+    height: auto;
+    color: #f8f9fa;
+    background-color: #313131;
 }
