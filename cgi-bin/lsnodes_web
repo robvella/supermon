@@ -42,7 +42,7 @@ my $node = $in{"node"};
 my $command = $in{"command"};
 #
 # Specify the location of SuperMon web directory
-my $allmondir = "/srv/http/supermon";
+my $allmondir = "/var/www/html/supermon";
 #
 #my $node = $ARGV[0];  # used for test purposes when run from console
 #

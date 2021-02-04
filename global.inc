@@ -17,7 +17,7 @@ $TITLE2 = "RPi2-3 Node";
 // Third line header title
 $TITLE3 = "Allstar/IRLP/Echolink System Manager";
 //
-// Background image - specify path if not /srv/http/supermon
+// Background image - specify path if not /var/www/html/supermon
 // Leaving BACKGROUND null "" results in BACKGROUND_COLOR
 $BACKGROUND = "background.jpg";
 //

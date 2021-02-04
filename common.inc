@@ -43,12 +43,13 @@ $version=`export TERM=vt100 && sudo asterisk -rx "core show version" |awk '{prin
 $version="Asterisk $version";
 //echo "<p>$version</p>";
 $pattern="/ [0-9].[0-9]rc[0-9]/";
+
 if (preg_match($pattern, $version, $match)) {
 	$system_type = "hamvoip";
 } else {
 	// Add other types if needed here
 	// $system_type="";
-	$system_type = "hamvoip";
+	$system_type = "asl";
 }
 //
 //	Paths to various programs called from php...

@@ -1,6 +1,6 @@
 <?php
 
-if ( ! file_exists ( "/srv/http/lsnodes/lsnodes_no_supermon_pw" )) {
+if ( ! file_exists ( "/var/www/html/lsnodes/lsnodes_no_supermon_pw" )) {
 
  include("../supermon/session.inc");
 

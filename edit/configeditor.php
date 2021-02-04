@@ -9,7 +9,7 @@ include("../session.inc");
 // Changes: KB4FXC 2018-02-04
 // Updates: KN2R 2019-04-25
 
-$SUPERMON_DIR="/srv/http/supermon";
+$SUPERMON_DIR="/var/www/html/supermon";
 
 include("../global.inc");
 print "<html>\n<body style=\"background-color:powderblue;\">\n";
@@ -43,8 +43,8 @@ if ($_SESSION['sm61loggedin'] === true) {
       print "<option value=\"$SUPERMON_DIR/style.css\">Supermon - style.css </option>\n";
    if (is_writable("$SUPERMON_DIR/astlookup.css"))
       print "<option value=\"$SUPERMON_DIR/astlookup.css\">Supermon - astlookup.css </option>\n";
-   if (is_writable("/srv/http/lsnodes/lsnodes-form.css"))
-      print "<option value=\"/srv/http/lsnodes/lsnodes-form.css\">Supermon - lsnodes-form.css </option>\n";
+   if (is_writable("/var/www/html/lsnodes/lsnodes-form.css"))
+      print "<option value=\"/var/www/html/lsnodes/lsnodes-form.css\">Supermon - lsnodes-form.css </option>\n";
    if (file_exists("/etc/asterisk/local/privatenodes.txt"))
       print "<option value=\"/etc/asterisk/local/privatenodes.txt\">Supermon - privatenodes.txt </option>\n";
    if (file_exists("/usr/local/etc/allstar.env"))
